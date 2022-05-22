@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="html-fix html-sticky" lang="ru">
 
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Sedona (гостиницы)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +25,7 @@
   <meta name="theme-color" content="#81B3D3">
 </head>
 
-<body class="body">
+<body class="body body-sticky-add">
   <!-- header (start) -->
   <header class="header">
     <h1 class="visually-hidden" tabindex="-1">Меню навигации сайта</h1>
@@ -48,7 +47,7 @@
       </ul>
       <ul class="header__nav header__nav-right">
         <li class="header__nav-items">
-          <a class="header__nav-links" href="blank.html">
+          <a class="header__nav-links header__nav-links-special" href="blank.html">
             Карта штата
           </a>
         </li>
@@ -63,68 +62,77 @@
   <!-- header (end) -->
 
   <!-- main (start) -->
-  <main>
+  <main class="main-catalog">
     <!-- фильтр и результаты поиска (start) -->
     <section class="search-filter">
       <h2 class="visually-hidden" tabindex="-1">Фильтр и результаты поиска</h2>
       <!-- фильтр (start) -->
       <div class="search-filter__container">
         <form class="search-filter__form" method="post" action="https://echo.htmlacademy.ru">
-          <div class="search-filter__inner">
-            <fieldset class="search-filter__border">
+          <div class="search-filter__inner search-filter__inner-left">
+            <fieldset class="search-filter__border search-filter__border-special">
               <legend class="search-filter__header">Инфраструктура:</legend>
               <ul class="search-filter__items">
-                <li class="search-filter__item">
+                <li class="search-filter__item search-filter__item-add">
                   <input class="search-filter__checkbox" type="checkbox" name="Инфраструктура: бассейн"
                     id="filter-swimming-pool" checked>
-                  <label class="search-filter__label" for="filter-swimming-pool">Бассейн</label>
+                  <label class="search-filter__label search-filter__label-set"
+                    for="filter-swimming-pool">Бассейн</label>
                 </li>
-                <li class="search-filter__item">
+                <li class="search-filter__item search-filter__item-add">
                   <input class="search-filter__checkbox" type="checkbox" name="Инфраструктура: парковка"
                     id="filter-parking">
-                  <label class="search-filter__label" for="filter-parking">Парковка</label>
+                  <label class="search-filter__label search-filter__label-set" for="filter-parking">Парковка</label>
                 </li>
-                <li class="search-filter__item">
+                <li class="search-filter__item search-filter__item-add">
                   <input class="search-filter__checkbox" type="checkbox" name="Инфраструктура: Wi-Fi" id="filter-wi-fi">
-                  <label class="search-filter__label" for="filter-wi-fi">Wi-Fi</label>
+                  <label class="search-filter__label search-filter__label-set" for="filter-wi-fi">Wi-Fi</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="search-filter__border">
               <legend class="search-filter__header">Тип жилья:</legend>
               <ul class="search-filter">
-                <li class="search-filter__item">
+                <li class="search-filter__item search-filter__item-add">
                   <input class="search-filter__checkbox" type="checkbox" name="Тип жилья: гостиница" id="filter-hotel"
                     checked>
-                  <label class="search-filter__label" for="filter-hotel">Гостиница</label>
+                  <label class="search-filter__label search-filter__label-set" for="filter-hotel">Гостиница</label>
                 </li>
-                <li class="search-filter__item">
+                <li class="search-filter__item search-filter__item-add">
                   <input class="search-filter__checkbox" type="checkbox" name="Тип жилья: мотель" id="filter-motel"
                     checked>
-                  <label class="search-filter__label" for="filter-motel">Мотель</label>
+                  <label class="search-filter__label search-filter__label-set" for="filter-motel">Мотель</label>
                 </li>
-                <li class="search-filter__item">
+                <li class="search-filter__item search-filter__item-add">
                   <input class="search-filter__checkbox" type="checkbox" name="Тип жилья: апартаменты"
                     id="filter-apartments" checked>
-                  <label class="search-filter__label" for="filter-apartments">Апартаменты</label>
+                  <label class="search-filter__label search-filter__label-set"
+                    for="filter-apartments">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
           </div>
-          <div class="search-filter__inner search-filter__inner-special">
-            <fieldset class="search-filter__border">
+          <div class="search-filter__inner search-filter__inner-right">
+            <fieldset class="search-filter__border search-filter__border-right">
               <legend class="search-filter__header">Стоимость в сутки, ₽: </legend>
               <div class="search-filter__container-item">
-                <p class="search-filter__item search-filter__item-special">
-                  <label class="search-filter__label-item-special">От <input class="search-filter__label-special-input"
+                <p class="search-filter__item search-filter__item-special search-filter__item-left">
+                  <label class="search-filter__label-item-special search-filter__label-item-special-left">От
+                    <input class="search-filter__label-special-input search-filter__label-special-input-left"
                       type="text" value="0"></label>
                 </p>
-                <p class="search-filter__item search-filter__item-special">
-                  <label class="search-filter__label-item-special">До <input class="search-filter__label-special-input"
-                      type="text" value="3000"></label>
+                <p class="search-filter__item search-filter__item-special search-filter__item-right">
+                  <label class="search-filter__label-item-special search-filter__label-item-special-right">До <input
+                      class="search-filter__label-special-input" type="text" value="3000"></label>
                 </p>
               </div>
-              <input class="search-filter__input" type="range" name="Стоимость в сутки, ₽" min="0" max="3000" step="1">
+              <div class="search-filter__input-container">
+                <input class="search-filter__input" value="0" min="0" max="3000" step="1" type="range"
+                  name="Стоимость в сутки, ₽">
+                <input class="search-filter__input" value="3000" min="0" max="3500" step="1" type="range"
+                  name="Стоимость в сутки, ₽">
+                <span class="search-filter__input-empty"></span>
+              </div>
             </fieldset>
             <div class="search-filter__btn-container">
               <button class="search-filter__go-button" type="submit">Показать</button>
@@ -149,17 +157,18 @@
               Сортировка:
             </p>
             <ul class="search-filter__settings">
-              <li class="search-filter__settings-item">
-                <a tabindex="1" class="search-filter__text-sort-main search-filter__text-sort-main-special search-filter__text-sort-price-active">
+              <li class="search-filter__settings-item search-filter__settings-item-set">
+                <a tabindex="1"
+                  class="search-filter__text-sort-main search-filter__text-sort-main-special search-filter__text-sort-price-active">
                   По цене
                 </a>
               </li>
-              <li class="search-filter__settings-item">
+              <li class="search-filter__settings-item search-filter__settings-item-set">
                 <a tabindex="1" class="search-filter__text-sort-main search-filter__text-sort-main-special">
                   По типу
                 </a>
               </li>
-              <li class="search-filter__settings-item">
+              <li class="search-filter__settings-item search-filter__settings-item-set">
                 <a tabindex="1" class="search-filter__text-sort-main search-filter__text-sort-main-special">
                   По рейтингу
                 </a>
@@ -170,16 +179,21 @@
             <!-- треугольники вверх и вниз -->
             <ul class="search-filter__settings">
               <li class="search-filter__settings-item">
-                <a tabindex="1" class="search-filter__text-sort-main search-filter__text-sort-main-setting search-filter__text-sort-up" title="Сортировка по возрастанию">
-                  <svg class="search-filter__text-sort-not-active" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a tabindex="1"
+                  class="search-filter__text-sort-main search-filter__text-sort-main-setting search-filter__text-sort-up"
+                  title="Сортировка по возрастанию">
+                  <svg class="search-filter__text-sort-not-active" width="11" height="10" viewBox="0 0 11 10"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" />
                   </svg>
                 </a>
               </li>
               <li class="search-filter__settings-item">
-                <a tabindex="1" class="search-filter__text-sort-main search-filter__text-sort-main-setting search-filter__text-sort-down" title="Сортировка по убыванию">
-                  <svg class="search-filter__text-sort-not-active search-filter__text-sort-active" width="11" height="10" viewBox="0 0 11 10" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                <a tabindex="1"
+                  class="search-filter__text-sort-main search-filter__text-sort-main-setting search-filter__text-sort-down"
+                  title="Сортировка по убыванию">
+                  <svg class="search-filter__text-sort-not-active search-filter__text-sort-active" width="11"
+                    height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" />
                   </svg>
                 </a>
@@ -218,8 +232,6 @@
               </div>
               <div class="search-filter__result-info-right">
                 <div class="search-filter__result-star-box">
-                  <img class="search-filter__result-star" src="img/star.svg" width="19" height="17"
-                    alt="Рейтинг отеля Седона">
                   <img class="search-filter__result-star" src="img/star.svg" width="19" height="17"
                     alt="Рейтинг отеля Седона">
                   <img class="search-filter__result-star" src="img/star.svg" width="19" height="17"
@@ -298,7 +310,7 @@
                     <p class="search-filter__result-text search-filter__result-type">
                       Апартаменты
                     </p>
-                    <p class="search-filter__result-text search-filter__result-price">
+                    <p class="search-filter__result-text search-filter__result-price search-filter__result-price-set">
                       От 2000 ₽
                     </p>
                   </div>
