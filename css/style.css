@@ -1236,6 +1236,7 @@ main {
   padding-left: 72px;
 
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .search-filter__inner-right {
   flex-direction: column;
@@ -1554,6 +1555,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .search-filter__result-info-header {
@@ -1604,6 +1606,8 @@ main {
 }
 
 .search-filter__result-price {
+  width: 100%;
+
   padding-right: 79px;
 }
 
@@ -1739,6 +1743,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 
   padding-top: 4px;
   padding-right: 2px;
@@ -1979,6 +1984,7 @@ main {
 }
 
 .search-filter__result-info-description {
+  padding-right: 1px;
   padding-bottom: 3px;
   padding-left: 29px;
 }
