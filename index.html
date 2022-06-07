@@ -27,24 +27,24 @@
     <div class="header__nav-container">
       <ul class="header__nav header__nav-left header__nav-left-moz">
         <li class="header__nav-items">
-          <a class="header__nav-links" href="blank.html">
+          <a class="header__nav-links" href="blank.html" aria-label="Информация о Седоне" tabindex="0">
             Информация
           </a>
         </li>
         <li class="header__nav-items">
-          <a class="header__nav-links" href="blank.html">
+          <a class="header__nav-links" href="blank.html" aria-label="Фото и видео Седоны">
             Фото и видео
           </a>
         </li>
       </ul>
-      <ul class="header__nav header__nav-right header__nav-right-moz">
+      <ul class="header__nav header__nav-right header__nav-right-moz" tabindex="-1">
         <li class="header__nav-items">
           <a class="header__nav-links header__nav-links-special" href="blank.html">
             Карта штата
           </a>
         </li>
         <li class="header__nav-items">
-          <a class="header__nav-links" href="catalog.html">
+          <a class="header__nav-links" href="catalog.html" aria-label="Гостиницы в Седоне">
             Гостиницы
           </a>
         </li>
@@ -62,7 +62,8 @@
       <img class="welcome__img-sedona" src="img/sedona.svg" width="456" height="78" alt="Sedona">
       <img class="welcome__img-canyon-sucks" src="img/canyon-sucks.svg" width="296" height="81"
         alt="Because the grand canyon sucks">
-      <img class="welcome__img-white-mask" src="img/white-mask.svg" width="1200" height="57" alt="белая маска">
+      <img class="welcome__img-white-mask" src="img/white-mask.svg" width="1200" height="57" alt="Далее о Седоне"
+        tabindex="-1">
     </section>
 
     <!-- Седона — небольшой городок в Аризоне, заслуживающий большего! (start) -->
@@ -214,71 +215,92 @@
         </h3>
 
         <a href="blank.html" class="interesting__btn-search">
+          <span class="visually-hidden">Нажмите для открытия формы поиска гостиницы в Седоне</span>
           <span class="interesting__btn-search-add">ПОИСК ГОСТИНИЦЫ В Седоне</span>
         </a>
       </div>
 
-      <div class="interesting__container">
-        <img class="interesting__map" src="img/map.jpg" width="1199" height="594" alt="Местоположение гостиницы Седона">
-      </div>
-
       <!-- Всплывающее окно (start) -->
       <!-- <section class="modal modal-hidden"> -->
-      <div class="modal">
+      <div class="modal modal-hidden" tabindex="0">
         <p class="visually-hidden" tabindex="-1">
-          Форма поиска гостиницы в Седоне
+          Приглашаем Вас настроить параметры для поиска гостиницы в Седоне
         </p>
         <form class="modal__form" method="post" action="https://echo.htmlacademy.ru">
           <div class="modal__container">
             <ul class="modal__container-wrapper">
               <li class="modal__container-item modal__container-item-one">
-                <label class="modal__item-label modal__item-label-date-one" for="filter-arrival-date">Дата
+                <label class="modal__item-label modal__item-label-date-one" for="filter-arrival-date" tabindex="0">Дата
                   заезда:</label>
                 <input
                   class="modal__item-input modal__item-input-value modal__item-input-value-input modal__input-data-add"
-                  type="text" name="Дата заезда в Седону:" id="filter-arrival-date" value="24 апреля 2017">
-                <button class="modal__item-button" type="button">Календарь</button>
+                  type="text" name="Дата заезда в Седону:" id="filter-arrival-date" value="24 апреля 2017"
+                  aria-label="Выбрать дату заезда">
+                <button class="modal__item-button" type="button"
+                  aria-label="Календарь для выбора даты заезда">Календарь</button>
               </li>
               <li class="modal__container-item modal__container-item-two">
-                <label class="modal__item-label modal__item-label-date-two" for="filter-departure-date">Дата
+                <label class="modal__item-label modal__item-label-date-two" for="filter-departure-date"
+                  tabindex="0">Дата
                   выезда:</label>
                 <input
                   class="modal__item-input modal__item-input-value modal__item-input-value-input modal__input-data-add"
-                  type="text" name="Дата выезда из Седоны:" id="filter-departure-date" value="4 июля 2017">
-                <button class="modal__item-button" type="button">Календарь</button>
+                  type="text" name="Дата выезда из Седоны:" id="filter-departure-date" value="4 июля 2017"
+                  aria-label="Выбрать дату выезда">
+                <button class="modal__item-button" type="button"
+                  aria-label="Календарь для выбора даты выезда">Календарь</button>
               </li>
             </ul>
             <ul class="modal__container-wrapper modal__container-wrapper-add">
               <li class="modal__container-item">
-                <label class="modal__item-label modal__item-label-three" for="filter-adults">Взрослые:</label>
+                <label class="modal__item-label modal__item-label-three" for="filter-adults" tabindex="0">
+                  <span class="visually-hidden">Выбор количества взрослых</span>
+                  Взрослые:</label>
                 <button type="button" class="modal__total">
-                  <span class="modal__total-button modal__total-button-minus">-</span>
+                  <span class="modal__total-button modal__total-button-minus">
+                    <span class="visually-hidden">Нажмите для уменьшения количества взрослых</span>
+                    -</span>
                 </button>
+                <span class="visually-hidden">Количество взрослых</span>
                 <input class="modal__total-input modal__item-input-value modal__input-data" type="text"
                   name="Количество взрослых:" id="filter-adults" value="2">
                 <button type="button" class="modal__total">
-                  <span class="modal__total-button modal__total-button-plus">+</span>
+                  <span class="modal__total-button modal__total-button-plus">
+                    <span class="visually-hidden">Нажмите для увеличения количества взрослых</span>
+                    +</span>
                 </button>
               </li>
               <li class="modal__container-item modal__container-item-add">
-                <label class="modal__item-label modal__item-label-four" for="filter-children">Дети:</label>
+                <label class="modal__item-label modal__item-label-four" for="filter-children" tabindex="0">
+                  <span class="visually-hidden">Выбор количества детей</span>
+                  Дети:</label>
                 <button type="button" class="modal__total">
-                  <span class="modal__total-button modal__total-button-minus">-</span>
+                  <span class="modal__total-button modal__total-button-minus">
+                    <span class="visually-hidden">Нажмите для уменьшения количества детей</span>
+                    -</span>
                 </button>
                 <input class="modal__total-input modal__item-input-value modal__input-data" type="text"
-                  name="Количество детей:" id="filter-children" value="0">
+                  name="Количество детей:" id="filter-children" value="0" aria-label="Количество детей">
                 <button type="button" class="modal__total">
-                  <span class="modal__total-button modal__total-button-plus">+</span>
+                  <span class="modal__total-button modal__total-button-plus">
+                    <span class="visually-hidden">Нажмите для увеличения количества детей</span>+</span>
                 </button>
               </li>
             </ul>
           </div>
           <button class="modal__container-button" type="submit">
-            <span class="modal__container-button-add">Найти</span>
+            <span class="modal__container-button-add">
+              <span class="visually-hidden">Нажмите для поиска гостиницы в Седоне</span>
+              Найти</span>
           </button>
         </form>
       </div>
       <!-- Всплывающее окно (end) -->
+
+      <div class="interesting__container">
+        <img class="interesting__map" src="img/map.jpg" width="1199" height="594" alt="Местоположение гостиницы Седона"
+          tabindex="0">
+      </div>
     </section>
     <!-- Заинтересовались? (end) -->
   </main>
@@ -289,10 +311,10 @@
   <footer class="footer footer-fix">
     <h1 class="visually-hidden" tabindex="-1">Подвал сайта</h1>
     <div class="footer__container-add">
-      <a class="footer__link-disabled">
+      <a class="footer__link-disabled" tabindex="-1">
         #visitSEDONA
       </a>
-      <a class="footer__link" href="tel:+78005558628">
+      <a class="footer__link" href="tel:+78005558628" aria-label="Связаться с нами можно по телефону: +78005558628">
         +7 800 555-86-28
       </a>
     </div>
