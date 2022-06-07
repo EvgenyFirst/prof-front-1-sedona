@@ -21,30 +21,30 @@
   <!-- header (start) -->
   <header class="header">
     <h1 class="visually-hidden" tabindex="-1">Меню навигации сайта</h1>
-    <a href="index.html" class="header__logo">
+    <a href="index.html" class="header__logo" tabindex="1">
       <img src="img/logo.svg" width="138" height="70" alt="Логотип отеля Седона">
     </a>
     <div class="header__nav-container">
       <ul class="header__nav header__nav-left header__nav-left-moz">
         <li class="header__nav-items">
-          <a class="header__nav-links" href="blank.html">
+          <a class="header__nav-links" href="blank.html" aria-label="Информация о Седоне" tabindex="0">
             Информация
           </a>
         </li>
         <li class="header__nav-items">
-          <a class="header__nav-links" href="blank.html">
+          <a class="header__nav-links" href="blank.html" aria-label="Фото и видео Седоны" tabindex="0">
             Фото и видео
           </a>
         </li>
       </ul>
       <ul class="header__nav header__nav-right header__nav-right-moz">
         <li class="header__nav-items">
-          <a class="header__nav-links header__nav-links-special" href="blank.html">
+          <a class="header__nav-links header__nav-links-special" href="blank.html" tabindex="0">
             Карта штата
           </a>
         </li>
         <li class="header__nav-items">
-          <a class="header__nav-links" href="catalog.html">
+          <a class="header__nav-links" href="catalog.html" tabindex="0">
             Гостиницы
           </a>
         </li>
@@ -56,14 +56,18 @@
   <!-- main (start) -->
   <main class="main-catalog">
     <!-- фильтр и результаты поиска (start) -->
-    <section class="search-filter">
-      <h2 class="visually-hidden" tabindex="-1">Фильтр и результаты поиска</h2>
+    <section class="search-filter" tabindex="0">
+      <h2 class="visually-hidden">Фильтр и результаты поиска</h2>
       <!-- фильтр (start) -->
       <div class="search-filter__container">
+        <span class="visually-hidden">Приглашаем Вас настроить фильтр поиска гостиниц в Седоне</span>
         <form class="search-filter__form" method="post" action="https://echo.htmlacademy.ru">
           <div class="search-filter__inner search-filter__inner-left">
             <fieldset class="search-filter__border search-filter__border-special">
-              <legend class="search-filter__header">Инфраструктура:</legend>
+              <legend class="search-filter__header" tabindex="0">
+                <span class="visually-hidden">Выбор инфраструктуры в Седоне</span>
+                Инфраструктура:
+              </legend>
               <ul class="search-filter__items">
                 <li class="search-filter__item search-filter__item-add">
                   <input class="search-filter__checkbox" type="checkbox" name="Инфраструктура: бассейн"
@@ -83,7 +87,10 @@
               </ul>
             </fieldset>
             <fieldset class="search-filter__border">
-              <legend class="search-filter__header">Тип жилья:</legend>
+              <legend class="search-filter__header" tabindex="0">
+                <span class="visually-hidden">Выбор типа жилья в Седоне</span>
+                Тип жилья:
+              </legend>
               <ul class="search-filter">
                 <li class="search-filter__item search-filter__item-add">
                   <input class="search-filter__checkbox" type="checkbox" name="Тип жилья: гостиница" id="filter-hotel"
@@ -106,28 +113,38 @@
           </div>
           <div class="search-filter__inner search-filter__inner-right">
             <fieldset class="search-filter__border search-filter__border-right">
-              <legend class="search-filter__header">Стоимость в сутки, ₽: </legend>
+              <legend class="search-filter__header" tabindex="0">
+                <span class="visually-hidden">Выбрать стоимость жилья за сутки в рублях</span>
+                Стоимость в сутки, ₽:
+              </legend>
               <div class="search-filter__container-item">
                 <p class="search-filter__item search-filter__item-special search-filter__item-left">
-                  <label class="search-filter__label-item-special search-filter__label-item-special-left">От
+                  <label class="search-filter__label-item-special search-filter__label-item-special-left" tabindex="0">
+                    <span class="visually-hidden">Настроить минимальную стоимость жилья за сутки</span>
+                    От
                     <input class="search-filter__label-special-input search-filter__label-special-input-left"
                       type="text" value="0"></label>
                 </p>
                 <p class="search-filter__item search-filter__item-special search-filter__item-right">
-                  <label class="search-filter__label-item-special search-filter__label-item-special-right">До <input
-                      class="search-filter__label-special-input" type="text" value="3000"></label>
+                  <label class="search-filter__label-item-special search-filter__label-item-special-right" tabindex="0">
+                    <span class="visually-hidden">Настроить максимальную стоимость жилья за сутки</span>
+                    До <input class="search-filter__label-special-input" type="text" value="3000"></label>
                 </p>
               </div>
-              <div class="search-filter__input-container">
+              <div class="search-filter__input-container" tabindex="0">
+                <span class="visually-hidden">Двигайте ползунки для настройки стоимости жилья или напишите цифры в полях
+                  выше</span>
                 <input class="search-filter__input" value="0" min="0" max="3000" step="1" type="range"
-                  name="Стоимость в сутки, ₽">
+                  name="Стоимость в сутки, ₽" tabindex="0" title="Первый ползунок">
                 <input class="search-filter__input" value="3000" min="0" max="3500" step="1" type="range"
-                  name="Стоимость в сутки, ₽">
+                  name="Стоимость в сутки, ₽" tabindex="0" title="Второй ползунок">
                 <span class="search-filter__input-empty"></span>
               </div>
             </fieldset>
             <div class="search-filter__btn-container">
-              <button class="search-filter__go-button" type="submit">Показать</button>
+              <button class="search-filter__go-button" type="submit">
+                <span class="visually-hidden">Нажмите эту кнопку для показа результатов поиска жилья</span>
+                Показать</button>
             </div>
           </div>
         </form>
@@ -135,9 +152,10 @@
       <!-- фильтр (end) -->
       <!-- результаты поиска (start) -->
       <div class="search-filter__result">
-        <div class="search-filter__box">
+        <div class="search-filter__box" tabindex="0">
+          <span class="visually-hidden">Сейчас Вы находитесь на панели сортировки результатов поиска жилья</span>
           <div class="search-filter__box-container">
-            <div tabindex="1" class="search-filter__box-result search-filter__box-result-moz">
+            <div tabindex="0" class="search-filter__box-result search-filter__box-result-moz">
               <p class="search-filter__text-main">
                 Найдено:
               </p>
@@ -145,24 +163,24 @@
                 3
               </p>
             </div>
-            <p
-              class="search-filter__text-sort-main search-filter__text-sort-main-disabled search-filter__text-sort-main-moz">
+            <p class="search-filter__text-sort-main search-filter__text-sort-main-disabled search-filter__text-sort-main-moz"
+              tabindex="0">
               Сортировка:
             </p>
             <ul class="search-filter__settings search-filter__settings-moz">
               <li class="search-filter__settings-item search-filter__settings-item-set">
-                <a tabindex="1"
+                <a tabindex="0"
                   class="search-filter__text-sort-main search-filter__text-sort-main-special search-filter__text-sort-price-active">
                   По цене
                 </a>
               </li>
               <li class="search-filter__settings-item search-filter__settings-item-set">
-                <a tabindex="1" class="search-filter__text-sort-main search-filter__text-sort-main-special">
+                <a tabindex="0" class="search-filter__text-sort-main search-filter__text-sort-main-special">
                   По типу
                 </a>
               </li>
               <li class="search-filter__settings-item search-filter__settings-item-set">
-                <a tabindex="1" class="search-filter__text-sort-main search-filter__text-sort-main-special">
+                <a tabindex="0" class="search-filter__text-sort-main search-filter__text-sort-main-special">
                   По рейтингу
                 </a>
               </li>
@@ -172,9 +190,8 @@
             <!-- треугольники вверх и вниз -->
             <ul class="search-filter__settings search-filter__settings-add-moz">
               <li class="search-filter__settings-item">
-                <a tabindex="1"
-                  class="search-filter__text-sort-main search-filter__text-sort-main-setting search-filter__text-sort-up"
-                  title="Сортировка по возрастанию">
+                <a class="search-filter__text-sort-main search-filter__text-sort-main-setting search-filter__text-sort-up"
+                  title="Сортировка по возрастанию" tabindex="0">
                   <svg class="search-filter__text-sort-not-active" width="11" height="10" viewBox="0 0 11 10"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" />
@@ -182,9 +199,8 @@
                 </a>
               </li>
               <li class="search-filter__settings-item">
-                <a tabindex="1"
-                  class="search-filter__text-sort-main search-filter__text-sort-main-setting search-filter__text-sort-down"
-                  title="Сортировка по убыванию">
+                <a class="search-filter__text-sort-main search-filter__text-sort-main-setting search-filter__text-sort-down"
+                  title="Сортировка по убыванию" tabindex="0">
                   <svg class="search-filter__text-sort-not-active search-filter__text-sort-active" width="11"
                     height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" />
@@ -203,38 +219,45 @@
                   alt="Amara Resort & Spa">
                 <div class="search-filter__result-info-description">
                   <a href="blank.html" class="search-filter__result-info-header search-filter__result-info-header-moz">
+                    <span class="visually-hidden">Название жилья</span>
                     Amara Resort & Spa
                   </a>
                   <div class="search-filter__result-inner search-filter__result-inner-moz">
-                    <p class="search-filter__result-text search-filter__result-type">
+                    <p class="search-filter__result-text search-filter__result-type" tabindex="0">
+                      <span class="visually-hidden">Тип жилья</span>
                       Гостиница
                     </p>
-                    <p class="search-filter__result-text search-filter__result-price">
+                    <p class="search-filter__result-text search-filter__result-price" tabindex="0">
+                      <span class="visually-hidden">Стоимость жилья</span>
                       От 4000 ₽
                     </p>
                   </div>
                   <div class="search-filter__result-box search-filter__result-box-moz">
                     <a class="search-filter__result-box-text search-filter__result-box-href" href="blank.html">
+                      <span class="visually-hidden">Нажмите для более подробной информации о жилье</span>
                       Подробнее
                     </a>
                     <button class="search-filter__result-box-text search-filter__result-box-reserve" type="button">
+                      <span class="visually-hidden">Нажмите для бронирования жилья</span>
                       Забронировать
                     </button>
                   </div>
                 </div>
               </div>
               <div class="search-filter__result-info-right search-filter__result-info-right-moz">
-                <div class="search-filter__result-star-box">
+                <div class="search-filter__result-star-box" tabindex="0">
+                  <span class="visually-hidden">Рейтинг жилья</span>
                   <img class="search-filter__result-star" src="img/star.svg" width="19" height="17"
-                    alt="Рейтинг отеля Седона">
+                    alt="Рейтинг жилья в Седоне">
                   <img class="search-filter__result-star" src="img/star.svg" width="19" height="17"
-                    alt="Рейтинг отеля Седона">
+                    alt="Рейтинг жилья в Седоне">
                   <img class="search-filter__result-star" src="img/star.svg" width="19" height="17"
-                    alt="Рейтинг отеля Седона">
+                    alt="Рейтинг жилья в Седоне">
                   <img class="search-filter__result-star" src="img/star.svg" width="19" height="17"
-                    alt="Рейтинг отеля Седона">
+                    alt="Рейтинг жилья в Седоне">
                 </div>
-                <div class="search-filter__result-rating-box">
+                <div class="search-filter__result-rating-box" tabindex="0">
+                  <span class="visually-hidden">Рейтинг жилья</span>
                   <p class="search-filter__result-rating-text">
                     Рейтинг:
                   </p>
@@ -250,37 +273,44 @@
                 <img class="search-filter__result-info-img" src="img/desert-quail-inn.jpg" width="135" height="90"
                   alt="Desert Quail Inn">
                 <div class="search-filter__result-info-description">
-                  <a href="blank.html" class="search-filter__result-info-header  search-filter__result-info-header-moz">
+                  <a href="blank.html" class="search-filter__result-info-header search-filter__result-info-header-moz">
+                    <span class="visually-hidden">Название жилья</span>
                     Desert Quail Inn
                   </a>
                   <div class="search-filter__result-inner search-filter__result-inner-moz">
-                    <p class="search-filter__result-text search-filter__result-type">
+                    <p class="search-filter__result-text search-filter__result-type" tabindex="0">
+                      <span class="visually-hidden">Тип жилья</span>
                       Мотель
                     </p>
-                    <p class="search-filter__result-text search-filter__result-price">
+                    <p class="search-filter__result-text search-filter__result-price" tabindex="0">
+                      <span class="visually-hidden">Стоимость жилья</span>
                       От 3000 ₽
                     </p>
                   </div>
                   <div class="search-filter__result-box search-filter__result-box-moz">
                     <a class="search-filter__result-box-text search-filter__result-box-href" href="blank.html">
+                      <span class="visually-hidden">Нажмите для более подробной информации о жилье</span>
                       Подробнее
                     </a>
                     <button class="search-filter__result-box-text search-filter__result-box-reserve" type="button">
+                      <span class="visually-hidden">Нажмите для бронирования жилья</span>
                       Забронировать
                     </button>
                   </div>
                 </div>
               </div>
               <div class="search-filter__result-info-right">
-                <div class="search-filter__result-star-box">
+                <div class="search-filter__result-star-box" tabindex="0">
+                  <span class="visually-hidden">Рейтинг жилья</span>
                   <img class="search-filter__result-star" src="img/star.svg" width="19" height="17"
-                    alt="Рейтинг отеля Седона">
+                    alt="Рейтинг жилья в Седоне">
                   <img class="search-filter__result-star" src="img/star.svg" width="19" height="17"
-                    alt="Рейтинг отеля Седона">
+                    alt="Рейтинг жилья в Седоне">
                   <img class="search-filter__result-star" src="img/star.svg" width="19" height="17"
-                    alt="Рейтинг отеля Седона">
+                    alt="Рейтинг жилья в Седоне">
                 </div>
-                <div class="search-filter__result-rating-box">
+                <div class="search-filter__result-rating-box" tabindex="0">
+                  <span class="visually-hidden">Рейтинг жилья</span>
                   <p class="search-filter__result-rating-text">
                     Рейтинг:
                   </p>
@@ -296,35 +326,44 @@
                 <img class="search-filter__result-info-img" src="img/villas-at-poco-diablo.jpg" width="135" height="90"
                   alt="Villas at Poco Diablo">
                 <div class="search-filter__result-info-description">
-                  <a href="blank.html" class="search-filter__result-info-header  search-filter__result-info-header-moz">
+                  <a href="blank.html" class="search-filter__result-info-header search-filter__result-info-header-moz"
+                    tabindex="0">
+                    <span class="visually-hidden">Название жилья</span>
                     Villas at Poco Diablo
                   </a>
                   <div class="search-filter__result-inner search-filter__result-inner-moz">
-                    <p class="search-filter__result-text search-filter__result-type">
+                    <p class="search-filter__result-text search-filter__result-type" tabindex="0">
+                      <span class="visually-hidden">Тип жилья</span>
                       Апартаменты
                     </p>
-                    <p class="search-filter__result-text search-filter__result-price search-filter__result-price-set">
+                    <p class="search-filter__result-text search-filter__result-price search-filter__result-price-set"
+                      tabindex="0">
+                      <span class="visually-hidden">Стоимость жилья</span>
                       От 2000 ₽
                     </p>
                   </div>
                   <div class="search-filter__result-box search-filter__result-box-moz">
                     <a class="search-filter__result-box-text search-filter__result-box-href" href="blank.html">
+                      <span class="visually-hidden">Нажмите для более подробной информации о жилье</span>
                       Подробнее
                     </a>
                     <button class="search-filter__result-box-text search-filter__result-box-reserve" type="button">
+                      <span class="visually-hidden">Нажмите для бронирования жилья</span>
                       Забронировать
                     </button>
                   </div>
                 </div>
               </div>
               <div class="search-filter__result-info-right">
-                <div class="search-filter__result-star-box">
+                <div class="search-filter__result-star-box" tabindex="0">
+                  <span class="visually-hidden">Рейтинг жилья</span>
                   <img class="search-filter__result-star" src="img/star.svg" width="19" height="17"
-                    alt="Рейтинг отеля Седона">
+                    alt="Рейтинг жилья в Седоне">
                   <img class="search-filter__result-star" src="img/star.svg" width="19" height="17"
-                    alt="Рейтинг отеля Седона">
+                    alt="Рейтинг жилья в Седоне">
                 </div>
-                <div class="search-filter__result-rating-box">
+                <div class="search-filter__result-rating-box" tabindex="0">
+                  <span class="visually-hidden">Рейтинг жилья</span>
                   <p class="search-filter__result-rating-text">
                     Рейтинг:
                   </p>
@@ -345,13 +384,13 @@
   <!--  -->
   <!--  -->
   <!-- footer (start) -->
-  <footer class="footer">
-    <h1 class="visually-hidden" tabindex="-1">Подвал сайта</h1>
+  <footer class="footer" tabindex="0">
+    <h1 class="visually-hidden" tabindex="-1">Наши контакты:</h1>
     <div class="footer__container-add">
       <a class="footer__link-disabled">
         #visitSEDONA
       </a>
-      <a class="footer__link" href="tel:+78005558628">
+      <a class="footer__link" href="tel:+78005558628" aria-label="Связаться с нами можно по телефону: +78005558628">
         +7 800 555-86-28
       </a>
     </div>
