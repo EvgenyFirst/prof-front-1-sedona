@@ -10,6 +10,7 @@
   --white-color: #ffffff;
   --lite-white-color: #ffffff4d;
   --very-lite-white-color: #ffffffe6;
+  --red-color: #ff0000;
   --darker-white-color: #eeeeee;
   --light-white-color: #f2f2f2;
   --light-darker-white-color: #ffffffe5;
@@ -645,6 +646,10 @@ main {
 
   box-shadow: 0px 7px 15px var(--lite-turquoise-color);
   background-color: var(--white-color);
+
+  -webkit-animation: bounce 0.6s;
+
+          animation: bounce 0.6s;
 }
 
 .modal__form {
@@ -991,6 +996,16 @@ main {
 
 .modal-hidden {
   display: none;
+}
+
+.modal-error {
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
+}
+
+.modal-error-data {
+  outline: 2px solid var(--red-color);
+  outline-offset: -2px;
 }
 
 /* Всплывающее окно (end) */
@@ -2226,3 +2241,90 @@ main {
   }
 }
 /* Fix Mozilla (end) */
+
+/* Animations (start) */
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(2000px);
+  }
+
+  70% {
+    transform: translateY(-30px);
+  }
+
+  90% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(2000px);
+  }
+
+  70% {
+    transform: translateY(-30px);
+  }
+
+  90% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+
+/* Animations (end) */
