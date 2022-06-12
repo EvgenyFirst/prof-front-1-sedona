@@ -222,7 +222,7 @@
 
       <!-- Всплывающее окно (start) -->
       <!-- <section class="modal modal-hidden"> -->
-      <div class="modal modal-hidden" tabindex="0">
+      <div class="modal" tabindex="0">
         <p class="visually-hidden" tabindex="-1">
           Приглашаем Вас настроить параметры для поиска гостиницы в Седоне
         </p>
@@ -263,7 +263,7 @@
                 </button>
                 <span class="visually-hidden">Количество взрослых</span>
                 <input class="modal__adults modal__total-input modal__item-input-value modal__input-data" type="text"
-                  name="Количество взрослых:" id="filter-adults" value="2">
+                  name="Количество взрослых:" id="filter-adults" value="2" required>
                 <button type="button" class="modal__total">
                   <span class="modal__total-button modal__total-button-plus">
                     <span class="visually-hidden">Нажмите для увеличения количества взрослых</span>
@@ -280,7 +280,7 @@
                     -</span>
                 </button>
                 <input class="modal__children modal__total-input modal__item-input-value modal__input-data" type="text"
-                  name="Количество детей:" id="filter-children" value="0" aria-label="Количество детей">
+                  name="Количество детей:" id="filter-children" value="0" aria-label="Количество детей" required>
                 <button type="button" class="modal__total">
                   <span class="modal__total-button modal__total-button-plus">
                     <span class="visually-hidden">Нажмите для увеличения количества детей</span>+</span>
@@ -298,6 +298,39 @@
       <!-- Всплывающее окно (end) -->
 
       <div class="interesting__container">
+        <div class="interesting__map-interactive interesting__map-hidden" tabindex="0">
+          <span class="visually-hidden">Интерактивная карта Google</span>
+          <iframe class="interesting__map-interactive-moz"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418390.8238066373!2d-111.84821477375273!3d34.989721653683176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1654944315175!5m2!1sru!2sru"
+            width="1200" height="593" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!--
+        <div class="interesting__map-interactive interesting__map-hidden" tabindex="0">
+          <span class="visually-hidden">Интерактивная карта Open Street Map</span>
+          <iframe class="interesting__map-interactive-moz" width="1200" height="593" frameborder="0" scrolling="no"
+            marginheight="0" marginwidth="0"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-111.92235946655273%2C34.78885386971239%2C-111.69576644897462%2C34.91760764761418&amp;layer=mapnik&amp;marker=34.85325594496614%2C-111.80906295776367"
+            style="border: 1px solid black"></iframe><br /><small><a
+              href="https://www.openstreetmap.org/?mlat=34.8533&amp;mlon=-111.8091#map=13/34.8533/-111.8091">Посмотреть
+              более крупную карту</a></small>
+        </div>
+        -->
+
+        <!--
+        <div class="interesting__map-interactive interesting__map-hidden" tabindex="0">
+          <span class="visually-hidden">Интерактивная карта Яндекс</span>
+          <a class="interesting__map-interactive-moz"
+            href="https://yandex.ru/maps/110669/sedona/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:0px;">Седона</a><a
+            href="https://yandex.ru/maps/110669/sedona/?ll=-111.754975%2C34.872581&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D-111.760%252C34.870%26spn%3D0.030%252C0.029%26text%3DUnited%2520States%2520of%2520America%252C%2520Arizona%252C%2520Coconino%2520County%252C%2520Sedona&utm_medium=mapframe&utm_source=maps&z=14.63"
+            style="color:#eee;font-size:12px;position:absolute;top:14px;">Седона — Яндекс Карты</a><iframe
+            src="https://yandex.ru/map-widget/v1/-/CCUJVYEtKD" width="1200" height="593" frameborder="0"
+            allowfullscreen="true" style="position:relative;"></iframe>
+        </div>
+        -->
+
         <img class="interesting__map" src="img/map.jpg" width="1199" height="594" alt="Местоположение гостиницы Седона"
           tabindex="0">
       </div>

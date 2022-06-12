@@ -89,3 +89,28 @@ popup.addEventListener("keydown", function (evt) {
   }
 });
 // Закрытие модального окна по нажатию клавиши Esc (end)
+
+var interestingMapInteractive = document.querySelector(".interesting__map-interactive");
+var interestingMap = document.querySelector(".interesting__map");
+
+// Отображение интерактивной карты (start)
+// Если JS работает, то скриншот карты скрыт и отображается интерактивная карта
+var hideOrAddMap = function () {
+  interestingMapInteractive.classList.remove("interesting__map-hidden");
+  interestingMap.classList.add("interesting__map-hidden");
+}
+
+hideOrAddMap();
+// Отображение интерактивной карты (end)
+
+// Атрибуты requred в форме поиска гостиницы (start)
+// Если JS работает, то атрибуты requred в форме поиска гостиницы удалены
+
+var removeFormAttributeReqired = function () {
+  modalAdults.removeAttribute("required");
+  modalChildren.removeAttribute("required");
+}
+
+removeFormAttributeReqired();
+
+// Атрибуты requred в форме поиска гостиницы (end)

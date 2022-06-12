@@ -601,6 +601,10 @@ main {
   border: none;
 
   background-color: var(--dark-dune-orange-color);
+
+  position: relative;
+
+  z-index: 99;
 }
 .interesting__btn-search:hover {
   cursor: pointer;
@@ -627,8 +631,22 @@ main {
   opacity: 0.3;
 }
 
+.interesting__container {
+  position: relative;
+
+  padding: 0 calc(2px - (100vw - 100%)) 0 0;
+}
+
 .interesting__map {
   background-color: var(--light-blue-color);
+}
+
+.interesting__map-interactive {
+  z-index: 1;
+}
+
+.interesting__map-hidden {
+  display: none;
 }
 
 /* Всплывающее окно (start) */
@@ -647,9 +665,11 @@ main {
   box-shadow: 0px 7px 15px var(--lite-turquoise-color);
   background-color: var(--white-color);
 
-  -webkit-animation: bounce 0.6s;
+  -webkit-animation: bounce 1s;
 
-          animation: bounce 0.6s;
+  animation: bounce 1s;
+
+  z-index: 2;
 }
 
 .modal__form {
@@ -1000,7 +1020,7 @@ main {
 
 .modal-error {
   -webkit-animation: shake 0.6s;
-          animation: shake 0.6s;
+  animation: shake 0.6s;
 }
 
 .modal-error-data {
@@ -1355,7 +1375,7 @@ main {
 .search-filter__item-left::after {
   content: " ";
 
-  display: inline-block;
+  display: block;
 
   position: absolute;
   top: 2px;
@@ -1449,7 +1469,7 @@ main {
 .search-filter__checkbox + .search-filter__label::before {
   content: " ";
 
-  display: inline-block;
+  display: block;
   flex-shrink: 0;
   flex-grow: 0;
 
@@ -1464,7 +1484,7 @@ main {
 .search-filter__checkbox:checked + .search-filter__label::before {
   content: " ";
 
-  display: inline-block;
+  display: block;
   flex-shrink: 0;
   flex-grow: 0;
 
@@ -1477,7 +1497,7 @@ main {
 .search-filter__checkbox:disabled + .search-filter__label::before {
   content: " ";
 
-  display: inline-block;
+  display: block;
   flex-shrink: 0;
   flex-grow: 0;
 
@@ -1490,7 +1510,7 @@ main {
 .search-filter__checkbox:disabled:checked + .search-filter__label::before {
   content: " ";
 
-  display: inline-block;
+  display: block;
   flex-shrink: 0;
   flex-grow: 0;
 
@@ -1894,7 +1914,7 @@ main {
 }
 
 .search-filter__text-sort-down {
-  display: inline-block;
+  display: block;
   transform: rotate(180deg);
 }
 
@@ -1953,7 +1973,7 @@ main {
 .search-filter__result-info-item::before {
   content: " ";
 
-  display: inline-block;
+  display: block;
 
   position: absolute;
 
@@ -1967,7 +1987,7 @@ main {
 .search-filter__result-info-item:last-child::after {
   content: " ";
 
-  display: inline-block;
+  display: block;
 
   position: absolute;
   bottom: 0;
@@ -2205,6 +2225,10 @@ main {
     margin-top: 56px;
   }
 
+  .interesting__map-interactive-moz {
+    width: 1199px;
+  }
+
   /* catalog */
   .search-filter__box-result-moz {
     margin-left: 3px;
@@ -2246,40 +2270,32 @@ main {
 
 @-webkit-keyframes bounce {
   0% {
-    transform: translateY(2000px);
+    transform: translateY(-86px);
   }
-
   70% {
-    transform: translateY(-30px);
+    transform: translateY(30px);
   }
-
   90% {
-    transform: translateY(10px);
+    transform: translateY(-10px);
   }
-
   100% {
     transform: translateY(0);
   }
-
 }
 
 @keyframes bounce {
   0% {
-    transform: translateY(2000px);
+    transform: translateY(-86px);
   }
-
   70% {
-    transform: translateY(-30px);
+    transform: translateY(30px);
   }
-
   90% {
-    transform: translateY(10px);
+    transform: translateY(-10px);
   }
-
   100% {
     transform: translateY(0);
   }
-
 }
 
 @-webkit-keyframes shake {
@@ -2325,6 +2341,5 @@ main {
     transform: translateX(10px);
   }
 }
-
 
 /* Animations (end) */
