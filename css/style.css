@@ -634,7 +634,7 @@ main {
 .interesting__container {
   position: relative;
 
-  padding: 0 calc(2px - (100vw - 100%)) 0 0;
+  width: auto;
 }
 
 .interesting__map {
